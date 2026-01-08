@@ -37,5 +37,10 @@ public class StudentmanagerApplication {
 	public String getStudent(@PathVariable int id) {
 		return "Sinh viên có mã: " + id;
 	}
+	
+	@GetMapping("/student")
+	public Student getStudent() {
+		return new Student(1, "Nguyễn Văn A", 20);
+	}
 
 }
