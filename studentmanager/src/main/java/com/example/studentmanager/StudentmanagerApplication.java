@@ -25,4 +25,10 @@ public class StudentmanagerApplication {
     	return "Xin chào " + name;
 
 	}
+	@GetMapping("/students/search")
+	public String search(
+        @RequestParam String keyword,
+        @RequestParam(defaultValue = "1") int page) {
+    return "keyword=" + keyword + ", page=" + page;
+}
 }
